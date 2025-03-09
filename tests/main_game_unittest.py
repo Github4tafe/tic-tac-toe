@@ -7,9 +7,9 @@
 
 import unittest
 from board import Board
+from main_game import TicTacToe
 
 class TestBoard(unittest.TestCase):
-
     # Case 1: the Player X is winning
     def test_player_x_wins(self):
         board = Board()
@@ -24,7 +24,7 @@ class TestBoard(unittest.TestCase):
         board.grid = [["X", "O", "X"],
                       ["X", "X", "O"],
                       ["O", "X", "O"]]
-        self.assertEqual(board.check_winner(), "Tie")
+        self.assertEqual(board.is_full(), True)
 
     # Case 3: one player has made an invalid move
     def test_invalid_move(self):

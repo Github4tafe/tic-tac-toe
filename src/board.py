@@ -39,4 +39,4 @@ class Board:
             return self.grid[0][0]
         if self.grid[0][2] == self.grid[1][1] == self.grid[2][0] != self.empty:
             return self.grid[0][2]
-        return  None
+        return None
