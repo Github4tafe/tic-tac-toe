@@ -7,13 +7,13 @@
 
 import unittest
 from board import Board
-from main_game import TicTacToe
+# from main_game import TicTacToe
 
 class TestBoard(unittest.TestCase):
     # Case 1: the Player X is winning
     def test_player_x_wins(self):
         board = Board()
-        board.grid = [["X", "X", "X"],
+        board.grid = [["X", "X", "X"], # (satisfying criteia: employs a 2D data structure)
                       ["O", "O", " "],
                       [" ", " ", " "]]
         self.assertEqual(board.check_winner(), "X")
